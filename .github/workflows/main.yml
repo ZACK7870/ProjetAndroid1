@@ -1,4 +1,4 @@
-name: Mon workflow
+name: Workflow Test
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
       - name: Le dépôt a été cloné sur le runner
         run: echo "Le dépôt ${{ github.repository }} a été cloné sur le runner."
 
-      - name: 💻 Le `workflow` est prêt
+      - name: 💻 Le ${{ github.workflow }} est prêt
         run: echo "Le ${{ github.workflow }} est maintenant prêt à tester votre code sur le runner."
 
       - name: Lister les fichiers du dépôt
