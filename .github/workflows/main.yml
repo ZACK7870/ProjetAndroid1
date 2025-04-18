@@ -16,3 +16,19 @@ jobs:
 
       - name: Afficher la branche et le dépôt
         run: echo " Le nom de votre branche est ${{ github.ref }} et votre dépôt est ${{ github.repository }}."
+
+      - name: Récupérer le code du dépôt
+        uses: actions/checkout@v4.2.2
+
+      - name: Le dépôt a été cloné sur le runner
+        run: echo "Le dépôt ${{ github.repository }} a été cloné sur le runner."
+
+      - name: 💻 Le `workflow` est prêt
+        run: echo "Le \`workflow\` est maintenant prêt à tester votre code sur le runner."
+
+      - name: Lister les fichiers du dépôt
+        run: ls -R .
+
+      - name: Afficher le statut de la tâche
+        if: always()
+        run: echo "Le statut de cette tâche est ${{ job.status }}."
