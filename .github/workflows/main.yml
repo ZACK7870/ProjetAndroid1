@@ -8,27 +8,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: La tâche a été automatiquement déclenchée par un événement push.
-        run: echo "La tâche a été automatiquement déclenchée par un événement push."
+      - name: 🎉 La tâche a été automatiquement déclenchée par un événement push.
+        run: echo "🎉 La tâche a été automatiquement déclenchée par un événement push."
 
-      - name: Cette tâche s'exécute maintenant sur un serveur Linux hébergé par GitHub
-        run: echo " Cette tâche s'exécute maintenant sur un serveur Linux hébergé par GitHub"
+      - name: 🐧 Cette tâche s'exécute maintenant sur un serveur Linux hébergé par GitHub
+        run: echo "🐧 Cette tâche s'exécute maintenant sur un serveur Linux hébergé par GitHub"
 
-      - name: Afficher la branche et le dépôt
-        run: echo " Le nom de votre branche est ${{ github.ref }} et votre dépôt est ${{ github.repository }}."
+      - name: 🔍 Afficher la branche et le dépôt
+        run: echo "🔍 Le nom de votre branche est ${{ github.ref }} et votre dépôt est ${{ github.repository }}."
 
       - name: Récupérer le code du dépôt
         uses: actions/checkout@v4.2.2
 
-      - name: Le dépôt a été cloné sur le runner
-        run: echo "Le dépôt ${{ github.repository }} a été cloné sur le runner."
+      - name: 💡 Le dépôt a été cloné sur le runner
+        run: echo "💡 Le dépôt ${{ github.repository }} a été cloné sur le runner."
 
       - name: 💻 Le ${{ github.workflow }} est prêt
-        run: echo "Le ${{ github.workflow }} est maintenant prêt à tester votre code sur le runner."
+        run: echo "💻 Le ${{ github.workflow }} est maintenant prêt à tester votre code sur le runner."
 
       - name: Lister les fichiers du dépôt
         run: ls -R .
 
-      - name: Afficher le statut de la tâche
+      - name: Build with Gradle
+        # You may pin to the exact commit or the version.
+        # uses: gradle/actions@06832c7b30a0129d7fb559bcc6e43d26f6374244
+        uses: gradle/actions@v4.3.1
+
+      - name: 🍏 Afficher le statut de la tâche
         if: always()
-        run: echo "Le statut de cette tâche est ${{ job.status }}."
+        run: echo "🍏 Le statut de cette tâche est ${{ job.status }}."
