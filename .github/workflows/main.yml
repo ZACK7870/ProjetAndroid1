@@ -1,13 +1,18 @@
 name: Mon workflow
-on: [push]
-jobs: 
-  say-hello: 
+
+on:
+  push:
+
+jobs:
+  explorer-actions-github:
     runs-on: ubuntu-latest
+
     steps:
-      - run : echo "Hello world"
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout repo
-        uses: actions/checkout@v4.2.2
-      - run: ls
+      - name: La tâche a été automatiquement déclenchée par un événement push.
+        run: echo "La tâche a été automatiquement déclenchée par un événement push."
+
+      - name: Cette tâche s'exécute maintenant sur un serveur Linux hébergé par GitHub
+        run: echo " Cette tâche s'exécute maintenant sur un serveur Linux hébergé par GitHub"
+
+      - name: Afficher la branche et le dépôt
+        run: echo " Le nom de votre branche est ${{ github.ref }} et votre dépôt est ${{ github.repository }}."
