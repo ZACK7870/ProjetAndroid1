@@ -2,4 +2,6 @@
     <string name="app_name">TestApp3aimoc</string>
     <string name="textview_static">Titre</string>
     <string name="main_activity_image_view_accessibility_text">Image de blabla</string>
+    <string name="main_activity_icon_menu">menu</string>
+    <string name="main_activity_city_tv">Paris</string>
 </resources>
