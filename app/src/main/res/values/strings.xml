@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">TestApp3aimoc</string>
+    <string name="textview_static">Titre</string>
+    <string name="main_activity_image_view_accessibility_text">Image de blabla</string>
+</resources>
