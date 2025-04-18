@@ -24,7 +24,7 @@ jobs:
         run: echo "Le dépôt ${{ github.repository }} a été cloné sur le runner."
 
       - name: 💻 Le `workflow` est prêt
-        run: echo "Le \`workflow\` est maintenant prêt à tester votre code sur le runner."
+        run: echo "Le ${{ github.workflow }} est maintenant prêt à tester votre code sur le runner."
 
       - name: Lister les fichiers du dépôt
         run: ls -R .
