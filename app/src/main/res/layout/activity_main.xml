@@ -108,6 +108,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:baselineAligned="false"
                 android:orientation="horizontal"
                 android:padding="24dp">
 
@@ -120,6 +121,7 @@
                     <ImageView
                         android:layout_width="32dp"
                         android:layout_height="32dp"
+                        android:contentDescription="wind"
                         app:tint="@color/yellow" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -302,7 +304,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Day 3 -->
             <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
